@@ -1,0 +1,693 @@
+import random
+import string
+import numpy as np
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+
+
+# -----------------------------
+# 1. DATASET 
+# -----------------------------
+
+texts = [
+    #greetings
+    "hello",
+    "hi",
+    "hey",
+    "good morning",
+    "good evening",
+    "good afternoon",
+    "hey there",
+    "hi there",
+    "whats up",
+    "how are you",
+    "howdy",
+    "yo",
+    "morning",
+    "evening",
+    "afternoon",
+    "hola",
+    "hi bot",
+    "hello again",
+    "just saying hi",
+    "nice to meet you",
+    "pleased to meet you",
+    "glad to talk to you",
+    "anyone here",
+    "is anyone there",
+    "you there",
+    "help me say hello",
+    "i need help to start a conversation",
+    "can you help me with a greeting",
+    "i am new here hello",
+    "starting with a hello",
+    "first time here hi",
+    "salam",
+    "saalam",
+    "helo",
+
+    #goodbye
+    "bye",
+    "goodbye",
+    "see you later",
+    "talk to you later",
+    "have a nice day",
+    "take care",
+    "farewell",
+    "bye bye",
+    "see ya",
+    "catch you later",
+    "until next time",
+    "i am leaving now",
+    "i have to go",
+    "gotta go",
+    "nice talking to you",
+    "thanks bye",
+    "bye for now",
+    "cheers",
+    "peace out",
+    "see you soon",
+    "later",
+    "i am out",
+    "good night",
+    "night",
+    "help me say goodbye",
+    "can you help me end this chat",
+    "i need help closing the conversation",
+    "how to say bye",
+    "ending our talk",
+    "just leaving",
+    "thats all bye",
+
+    #thanks
+    "thanks",
+    "thank you",
+    "thanks a lot",
+    "thank you so much",
+    "many thanks",
+    "thanks a ton",
+    "really appreciate it",
+    "i am grateful",
+    "much obliged",
+    "cheers for the help",
+    "thanks for your help",
+    "you helped me a lot",
+    "that was helpful thanks",
+    "appreciate the info",
+    "thanks for guiding me",
+    "nice thanks",
+    "thanks buddy",
+    "good job thanks",
+    "great help thank you",
+    "i cant thank you enough",
+    "god bless you",
+    "help me say thank you",
+    "can you help me with a thank you",
+    "i need help expressing gratitude",
+    "thank you for your time",
+    "thanks for being there",
+    "that solves my problem thanks",
+
+    #help
+    "help",
+    "help me",
+    "i need help",
+    "can you help me",
+    "please help",
+    "need info",
+    "i need assistance",
+    "what can you do",
+    "how do i use this",
+    "show me what you can do",
+    "what can you help with",
+    "how can you assist me",
+    "what do you offer",
+    "your help please",
+    "give me a hand",
+    "i dont know what to do",
+    "help me understand",
+    "i need guidance",
+    "what should i do",
+    "i am lost",
+    "need some help",
+    "urgent help needed",
+    "assist me",
+    "can you help me with something",
+    "help me please",
+    "i could use some help",
+    "where do i start",
+
+    #history
+    "tell me about kardan university history",
+    "when was kardan university founded",
+    "who started kardan university",
+    "what is the story behind kardan",
+    "history of kardan university",
+    "how did kardan begin",
+    "how was kardan university established",
+    "who is the founder of kardan",
+    "tell me about the founder",
+    "what year was kardan started",
+    "when did kardan university start",
+    "how old is kardan university",
+    "kardan university origin",
+    "how did kardan university grow",
+    "why was kardan created",
+    "what inspired kardan university",
+    "i want to know kardan background",
+    "brief history of kardan",
+    "can you tell me the past of kardan",
+    "what is kardan university known for",
+    "how did kardan become famous",
+    "how small was kardan in the start",
+    "first private university in afghanistan",
+    "what does kardan mean",
+    "is kardan the oldest private university",
+    "how many students were there at first",
+    "i need info about kardan history",
+    "help me with kardan university history",
+    "can you help me learn kardan story",
+    "i need help about kardan past",
+    "help me understand kardan background",
+    "how kardan university started from nothing",
+    "how kardan began its journey",
+    "i am curious about kardan history",
+    "could you tell the story of kardan",
+    "kardan founding story pls",
+    "hi i want to know kardan history",
+    "when did kardan get university status",
+    "help me with history",
+    "help with past of kardan",
+
+    #library
+    "where is the library",
+    "kardan library location",
+    "how many libraries does kardan have",
+    "what are the library services",
+    "tell me about kardan university library",
+    "i need a book from library",
+    "can i borrow books",
+    "library timings",
+    "when is the library open",
+    "does kardan have a digital library",
+    "how to access online library",
+    "ebooks collection",
+    "library resources for students",
+    "what facilities does the library offer",
+    "discussion rooms in library",
+    "can i print in the library",
+    "copy and print center",
+    "library computers",
+    "internet access in library",
+    "library competitions",
+    "book reading competition",
+    "essay writing competition library",
+    "microsoft office training in library",
+    "library training programs",
+    "are there any book exhibitions",
+    "how many books in kardan library",
+    "new books in library",
+    "can alumni use the library",
+    "library for graduate students",
+    "parwan library",
+    "taimani library",
+    "digital library at graduate campus",
+    "quiet study place kardan",
+    "does library have journals",
+    "research journals in library",
+    "thesis samples library",
+    "newspapers in library",
+    "how to find a book in library",
+    "catalog of books",
+    "free research websites library",
+    "help me with library resources",
+    "can you help me find library",
+    "i need help accessing library online",
+    "help about library services",
+    "what to do in library",
+    "help with borrowing books",
+    "library help pls",
+    "hi i need library info",
+    "library info please",
+    "services of library kardan",
+    "librery",
+    "libraery",
+    "laibraery",
+
+
+    #fallback
+    "what is dollar price",
+    "price of usd today",
+    "football news",
+    "could you give me football news",
+    "world news",
+    "who is messi",
+    "who is ronaldo",
+]
+
+
+labels = [
+    #greetings
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+
+    #goobye
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+    "goodbye",
+
+    #thanks
+    "thanks",
+    "thanks",
+    "thanks",
+    "thanks",
+    "thanks",
+    "thanks",
+    "thanks",
+    "thanks",
+    "thanks",
+    "thanks",
+    "thanks",
+    "thanks",
+    "thanks",
+    "thanks",
+    "thanks",
+    "thanks",
+    "thanks",
+    "thanks",
+    "thanks",
+    "thanks",
+    "thanks",
+    "thanks",
+    "thanks",
+    "thanks",
+    "thanks",
+    "thanks",
+    "thanks",
+
+    #help
+    "help",
+    "help",
+    "help",
+    "help",
+    "help",
+    "help",
+    "help",
+    "help",
+    "help",
+    "help",
+    "help",
+    "help",
+    "help",
+    "help",
+    "help",
+    "help",
+    "help",
+    "help",
+    "help",
+    "help",
+    "help",
+    "help",
+    "help",
+    "help",
+    "help",
+    "help",
+    "help",
+
+    #history
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+    "history_university",
+
+    #library
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    "library",
+    
+    #fallback
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+]
+
+
+# -----------------------------
+# 2. RESPONSES
+# -----------------------------
+
+responses = {
+    "greeting": [
+        "Hello! How can I assist you today? Feel free to ask anything about Kardan University. What can I help you with?",
+        "Hi there! Welcome. Tell me what you’re looking for, and I’ll guide you through it. How can I assist you today?",
+        "Hello! Need information about programs, admissions, or campus life? feel free to ask!",
+        "Hi! Great to see you here. Ask me anything about Kardan University, and I’ll do my best to guide you. How can I assist you?",
+        "Hello! I’m here to support you with any questions you have. What can I help you with today?",
+        "Hi and welcome! Whether you’re exploring admissions or just curious, I’m ready to assist. What can I help you?",
+        "Hello! How can I assist you today? I’m a Kardan University chatbot, here to guide you with accurate information",
+        "Hi there! I’m ready to help you navigate anything related to Kardan University — from academic programs and fee structures to campus services and student life. Just tell me what you’re looking for?",
+        "Hello! I am  Kardan University chatbot, here to support you with accurate and up‑to‑date information about the university. Whether you’re a new student, a visitor, or someone exploring opportunities, I can guide you through admissions, programs, schedules, and more. How can I assist you today?",
+        "Hi and welcome! If you’re searching for details about courses, registration, exams, or campus facilities, you’re in the right place. I can help you find answers quickly and explain things in a simple, friendly way. Just let me know what you need",
+        "Hello! I am a Kardan University chatbot, designed to help you explore everything the university offers. Whether you want program details, fee information, or guidance about student services, I’m here to make things easier. Tell me what you’re looking for, and I’ll guide you step by step.",
+        "Hi there! It’s great to see you. If you’re trying to learn more about Kardan University — admissions, departments, schedules, or anything else — I’m here to provide clear and helpful information. Feel free to ask whatever’s on your mind, and I’ll do my best to assist you. What can I help you with today?",
+        "Hello and welcome! I am a Kardan University chatbot, here to make your search for information simple and stress‑free. Whether you’re exploring academic programs, checking requirements, or just curious about the university’s services, I’m ready to guide you. How can I assist you right now?",
+        "Hello! I’m here to make your Kardan University experience easier. What can I help you with right now?",
+        "Hi! Tell me what you’re searching for, and I’ll help you find the right answer. How can I assist you today?"
+    ],
+
+    "goodbye": [
+        "Thank you for chatting with me today! I’m glad I could assist you with your Kardan University questions. If anything else comes to mind later, just return and I’ll be ready to help. Have a wonderful day ahead!",
+        "It was great assisting you! I hope the information I provided made things clearer for you. Whenever you need guidance about programs, admissions, or anything else, feel free to come back. Goodbye and take care!",
+        "👋 Goodbye! If you need anything later, feel free to return. Have a great day ahead.",
+        "Thanks for stopping by! I’m always here to support you with accurate and helpful information about Kardan University. If you ever need more details or want to explore something new, just return anytime. Wishing you a great day!",
+        "👋 See you soon! I’m here whenever you need more help.",
+        "Take care! Come back anytime you have more questions.",
+        "Bye for now! Wishing you a productive and successful day.",
+        "👋 Goodbye! I hope I was able to help you today.",
+        "See you later! Don’t hesitate to return if you need more information.",
+        "I’m glad I could help you today. If you have more questions later — whether about courses, fees, or campus life — I’ll be here to guide you. Until then, goodbye and best of luck with everything you’re working on!",
+        "It was a pleasure assisting you! Remember, you can always come back whenever you need more information or want to explore something else about Kardan University. Have a productive and positive day. Goodbye!",
+        "Thank you for your time! I hope your experience here was helpful and smooth. If you ever want to continue the conversation or need more support, I’ll be right here waiting. Take care and goodbye for now!",
+        "Farewell! I’ll be here whenever you need assistance again.",
+        "👋 Bye! Feel free to ask me anything whenever you’re back."
+    ],
+
+    "thanks": [
+        "You’re welcome! I’m glad I could help you with that 😊",
+        "No problem at all — happy to assist anytime 👍",
+        "You’re welcome! If you need anything else, feel free to ask 🙂",
+        "Glad I could help! Let me know if you have more questions",
+        "Anytime! I’m always here to support you 🤝",
+        "You’re welcome! I’m here whenever you need more guidance",
+        "Happy to help! Just reach out if you need anything else ",
+        "You’re welcome! I’m glad the information was useful 💡",
+        "You’re very welcome! I’m glad I could provide the information you needed. If you ever want to explore more topics or need help understanding something else, I’ll be right here to guide you ",
+        "I’m happy I could assist you today. If more questions come up — whether about programs, admissions, or anything else — feel free to return anytime. I’m always ready to help ",
+        "You’re welcome! It’s great to hear that the guidance was helpful. Whenever you need more support or want to learn something new, just let me know and I’ll walk you through it ",
+        "I’m glad I could help you out. If you ever need more details, clarification, or want to explore another topic, I’ll be here to make things easier for you. Don’t hesitate to return ",
+        "You’re welcome! Helping you is what I’m here for. If you’d like to continue learning or need assistance with anything related to Kardan University, feel free to ask anytime ",
+        "I’m really glad the information solved your problem. If you ever need more guidance — whether it’s a quick question or something detailed — I’ll be here to support you step by step ",
+        "You’re welcome! If you need help again, whether it’s about courses, fees, schedules, or anything else, I’ll be ready to assist you whenever you return "
+    ],
+
+    "help": [
+        "I’m here to help. What kind of support do you need right now? Admissions, portal login, campus locations, or something else?",
+        "Sure! I can help you with many things. Could you tell me what you need assistance with — registration, the student portal, addresses, or contact details?",
+        "Tell me what you’re working on. I can help with admissions, portal access, campus directions, or general university information.",
+        "Let me know what you need assistance with. I can guide you through registration steps, portal issues, or locating any Kardan University department.",
+        "I’d be happy to help you! Just let me know what you’re working on — whether it’s registering for courses, accessing your student portal, finding a department’s address, or getting official contact information. Tell me the area you need support with, and I’ll guide you step by step.",
+       "Let me know what you need help with — admissions, portal login, or campus addresses.",
+        "I can guide you through many university processes. If you’re unsure where to start, just tell me whether you need help with registration steps, portal login issues, campus addresses, or contacting a specific department. I’ll provide the details you need."
+    ],
+
+    "history_university": [
+        "Kardan University was established in 2002 in Kabul by its founder Roeen Rahmani, making it the very first private university in Afghanistan. It began humbly, with only 15 students in a single classroom, at a time when higher education was just opening to private initiatives. By 2006, the Ministry of Higher Education officially granted it university status. Since then, Kardan has grown into a leading institution with thousands of students, offering undergraduate and graduate programs across disciplines like business, IT, engineering, and social sciences.",
+        "Kardan University was founded in 2002 by Roeen Rahmani, at a time when Afghanistan was opening to new opportunities in education. It began with only 15 students in a single classroom, offering short courses in business and management. The name “Kardan” means competence in Dari, reflecting its mission to build capable professionals. Within just a few years, the institute grew rapidly, and in 2006 it was officially recognized as a university by the Ministry of Higher Education. From those modest beginnings, Kardan expanded into multiple campuses in Kabul, offering undergraduate and graduate programs in business, IT, engineering, and social sciences. It became the first private university in Afghanistan, setting a model for others to follow. Over time, Kardan earned international accreditations, joined global networks, and launched research journals and policy forums. Today, it is known for producing thousands of graduates who contribute to Afghanistan’s development, while still carrying the spirit of its humble start.",
+        "Kardan University started its journey in 2002, during a time when Afghanistan was opening to private education. Its founder, Roeen Rahmani, began with a single classroom and a vision to transform learning. From those modest beginnings, Kardan grew rapidly, gaining recognition from the Ministry of Higher Education in 2006 and later achieving international accreditation. It has pioneered online education during the COVID-19 pandemic, launched graduate programs, and built a reputation as a center for excellence. Today, it stands as a symbol of progress, with thousands of students and alumni shaping Afghanistan’s future.",
+        "The journey of Kardan University began in 2002, when its founder Roeen Rahmani opened a small classroom with just 15 students. At that time, private higher education was unheard of in Afghanistan, so Kardan’s establishment was groundbreaking. By 2006, the Ministry of Higher Education granted it full university status, making it the first licensed private university in the country. Over the years, Kardan grew steadily, adding new faculties, programs, and campuses. It introduced graduate degrees, built strong international partnerships, and became the first Afghan university to join the Global Business School Network. Kardan also gained accreditation from organizations like ACBSP and IACBE, ensuring its programs met international standards. Today, it has educated more than 30,000 graduates, and is recognized as a leader in innovation, research, and quality education in Afghanistan. Its history is a story of vision, resilience, and growth from a single classroom to a respected institution.",
+        "The story of Kardan University is one of resilience and vision. Founded in 2002, it was Afghanistan’s first privately owned higher education institution, created to provide quality education during a period of national rebuilding. Starting with a handful of students, it quickly expanded and became a full university in 2006. Over the years, Kardan has achieved national and international accreditations (including ACBSP and IACBE) and has produced more than 30,000 graduates. Its journey reflects the broader transformation of Afghan education, from modest beginnings to global recognition."
+    ],
+
+    "library": [
+        "Kardan University provides a rich library system across three campuses. The physical library at Parwan‑e‑Du contains printed books, thesis samples, newspapers, magazines, and journals, while the digital libraries at Taimani and Graduate Studies offer thousands of e‑books, articles, and research journals. You’ll find computer workstations, internet access, discussion rooms, quiet study areas, and a full copy & print center. The library also organizes reading competitions, essay contests, Microsoft Office training, and book exhibitions. Whether you want to borrow a book, access digital resources, or search the online catalog, I can guide you through every step 📘.",
+        "Our library system includes everything you need for academic research and study. The Parwan‑e‑Du Library offers printed books, magazines, newspapers, thesis samples, and journals, along with computers, internet access, and a copy & print center. The digital libraries at Taimani and Graduate Studies provide thousands of e‑books, articles, and international journals. Students can borrow books, join competitions, attend training programs, and explore book exhibitions. All library materials are catalogued online, so you can easily search for books or digital resources. Let me know if you want help accessing the online library or locating a specific resource.",
+        "Our library system is built to give students, alumni, and faculty a complete academic support environment. The Parwan‑e‑Du Library houses printed books, thesis samples, newspapers, magazines, and journals, while the digital libraries at Taimani and Graduate Studies offer extensive e‑resources, including thousands of e‑books and international research journals. You can borrow books, use computers, print documents, study in quiet or group rooms, and access free research websites. The library also organizes reading competitions, essay contests, Microsoft Office training, and book exhibitions. All books are catalogued online, making it easy to search for any title you need.",
+        "Kardan University provides a complete library system across three campuses, giving you access to both physical and digital resources. Whether you’re working on assignments, research, or personal study, the library offers:<ul><li>Printed books and thesis samples</li><li>Digital e-books and journals</li><li>Computer workstations and internet access</li><li>Quiet study rooms and group discussion spaces</li><li>Competitions, exhibitions, and training programs</li></ul>If you need help accessing the digital library or finding a specific book, I can guide you. And if you need support with registration or portal access, I can help with that too.",
+        "Kardan University libraries aim to inspire academic excellence by offering a wide range of resources and services. The physical library at Parwan‑e‑Du provides printed books, journals, thesis samples, newspapers, and a full printing center. The digital libraries at Taimani and Graduate Studies give you access to thousands of e‑books, articles, and research journals. You can use computer workstations, internet access, discussion rooms, and quiet study spaces. The library also hosts competitions, exhibitions, and training programs to help students improve their reading, writing, and computer skills. If you need help accessing the digital library or finding a specific book, I’m here to assist 🌟.",
+        "Kardan libraries are built to support your academic growth with a wide range of resources and services. Across our physical and digital libraries, you’ll find everything you need for research, assignments, and study. Our offerings include:<ul><li>Printed books, newspapers, magazines, and thesis samples</li><li>Thousands of e-books, articles, and international journals</li><li>Computer labs with internet access</li><li>Quiet study zones and discussion rooms</li><li>Copy & print center and research support tools</li></ul>If you want help accessing the online library or locating a resource, I’m here to help you every step of the way. And if you need information about other university services, just let me know.",
+        "Kardan University libraries are designed to help you succeed academically. Whether you’re looking for printed books or digital resources, here’s what you can access:<br><br><strong>Physical Library (Parwan-e-Du):</strong><ul><li>Printed books</li><li>Thesis samples</li><li>Newspapers & magazines</li><li>Research journals</li><li>Copy & print center</li><li>Computer workstations</li><li>Quiet study areas</li></ul><strong>Digital Libraries (Taimani & Graduate Studies):</strong><ul><li>Thousands of e-books</li><li>International journals</li><li>Articles & research databases</li><li>Online catalog</li><li>Free research websites</li></ul><strong>Programs & Activities:</strong><ul><li>Reading competitions</li><li>Essay writing contests</li><li>Microsoft Office training</li><li>Book exhibitions</li></ul>If you need help finding a book or accessing the digital library, I can guide you 📚."
+      ],
+ 
+    "fallback": [
+        "I’m not sure I understood that. I’m a Kardan University guide chatbot, so please ask something related to the university.",
+        "Sorry, I didn’t catch that. I can only help with Kardan University topics — could you rephrase your question?",
+        "I didn’t fully understand. Please ask something related to Kardan University so I can assist you properly.",
+        "I’m having trouble understanding. Please ask something related to Kardan University admissions, programs, portal, or services.",
+        "I’m having a bit of trouble understanding your message. Just a reminder — I’m a Kardan University guide chatbot, so I can only help with topics like admissions, programs, portal access, fees, or campus information. If you can rephrase your question within these areas, I’ll gladly assist.",
+        "Sorry, I couldn’t interpret that clearly. Since I only provide information about Kardan University, I won’t be able to help with unrelated subjects. If you can tell me what Kardan University-related topic you need — registration, contacts, departments, or portal issues — I’ll guide you step by step.",
+        "Sorry, I can only guide you about Kardan University, ask me any thing related-to University and i will try to do my best! "
+    ]
+}
+
+
+# -----------------------------
+# 3. CLEANING
+# -----------------------------
+
+def clean(text):
+    text = text.lower().strip()
+    text = "".join(c for c in text if c not in string.punctuation)
+    return text
+
+
+texts = [clean(t) for t in texts]
+
+
+# -----------------------------
+# 4. MODEL
+# -----------------------------
+
+vectorizer = CountVectorizer(ngram_range=(1,2))
+X = vectorizer.fit_transform(texts)
+
+model = MultinomialNB()
+model.fit(X, labels)
+
+
+# -----------------------------
+# 5. TOP-2 INTENT LOGIC (FIXED)
+# -----------------------------
+
+def predict_intents(user_input):
+    text = clean(user_input)
+    vec = vectorizer.transform([text])
+
+    # ✅ FIX 1: zero-vector check (unknown words)
+    if vec.sum() == 0:
+        return ["fallback"]
+
+    probs = model.predict_proba(vec)[0]
+
+    # ✅ NEW: sort probabilities for smart decision
+    sorted_probs = np.sort(probs)[::-1]
+    max_conf = sorted_probs[0]
+
+    # ✅ FIX 2: smarter fallback logic
+    if max_conf < 0.45 or (sorted_probs[0] - sorted_probs[1]) < 0.10:
+        return ["fallback"]
+
+    classes = model.classes_
+    sorted_idx = probs.argsort()[::-1]
+
+    intents = []
+    for i in sorted_idx:
+        confidence = probs[i]
+
+        # keep your threshold (good choice)
+        if confidence >= 0.25:
+            intents.append(classes[i])
+
+        if len(intents) == 2:
+            break
+
+    # safety fallback (rare case)
+    if not intents:
+        return ["fallback"]
+
+    return intents
+
+# -----------------------------
+# 6. RESPONSE SYSTEM (FIXED)
+# -----------------------------
+
+def get_response(intents):
+    result = []
+
+    # ✅ Define priority (lower number = higher priority)
+    priority = {
+        "greeting": 0,
+        "goodbye": 1,
+        "thanks": 2,
+        "help": 3
+    }
+
+    # default priority for others
+    def get_priority(intent):
+        return priority.get(intent, 5)
+
+    # ✅ Sort intents based on priority
+    intents = sorted(intents, key=get_priority)
+
+    for intent in intents:
+        if intent in responses:
+            result.append(random.choice(responses[intent]))
+
+    return "\n".join(result)
+
+
+# -----------------------------
+# 7. CHAT LOOP
+# -----------------------------
+
+print("Chatbot running... type 'quit' to stop")
+
+while True:
+    user = input("You: ")
+
+    if user.lower() == "quit":
+        break
+
+    intents = predict_intents(user)
+    reply = get_response(intents)
+
+    print("Bot:", reply)
