@@ -42,8 +42,16 @@ texts = [
     "starting with a hello",
     "first time here hi",
     "salam",
-    "saalam",
     "helo",
+    "hii",
+    "hola there hola",
+    "heyy",
+    "hola",
+    "halo",
+    "hy",
+    "hlo",
+    "hi theree",
+    "helloo",
 
     #goodbye
     "bye",
@@ -235,18 +243,144 @@ texts = [
 
 
     #fallback
-    "what is dollar price",
+    "what is the dollar price",
     "price of usd today",
     "football news",
     "could you give me football news",
-    "world news",
+    "what is dollar price",
+    "price of usd today",
+    "bitcoin rate today",
+    "weather today",
+    "weather in kabul",
+    "temperature now",
     "who is messi",
     "who is ronaldo",
+    "tell me about elon musk",
+    "latest news",
+    "world news today",
+    "movie recommendation",
+    "best movies to watch",
+    "how to cook rice",
+    "recipe for pizza",
+    "how to make tea",
+    "download youtube video",
+    "how to earn money online",
+    "online jobs",
+    "freelancing tips",
+    "how to hack wifi",
+    "free internet tricks",
+    "best mobile phones",
+    "iphone price",
+    "samsung vs iphone",
+    "what is programming",
+    "learn python fast",
+    "coding tutorials",
+    "how to build website",
+    "html css tutorial",
+    "javascript basics",
+    "open google",
+    "open youtube",
+    "search something for me",
+    "play music",
+    "play video",
+    "tell me a joke",
+    "make me laugh",
+    "random fact",
+    "funny story",
+    "love advice",
+    "relationship advice",
+    "how to impress girl",
+    "dating tips",
+    "motivation speech",
+    "inspire me",
+    "life advice",
+    "health tips",
+    "how to lose weight",
+    "gym workout plan",
+    "football score",
+    "match results",
+    "who won the match",
+    "champions league",
+    "cricket score",
+    "basketball news",
+    "stock market",
+    "gold price",
+    "currency exchange",
+    "convert usd to afn",
+    "map of world",
+    "where is america",
+    "capital of france",
+    "geography question",
+    "history of world war",
+    "science facts",
+    "physics question",
+    "math problem",
+    "solve equation",
+    "random words asd",
+    "qwerty keyboard",
+    "asdfghjkl",
+    "zzzz random text",
+    "nonsense input here",
+    "blah blah blah",
+    "something weird",
+    "random typing",
+    "i dont know what i am saying",
+    "just typing anything",
+    "test input",
+    "checking system",
+    "dummy text",
+    "helloasdf",
+    "random123",
+    "$$$%%%^^^",
+    "???!!!",
+    "123456789",
+    "abc xyz test",
+    "mixed random words",
+    "this is unrelated",
+    "this makes no sense",
+    "unknown query",
+    "invalid question",
+    "not about university",
+    "outside domain question",
+    "off topic question",
+    "irrelevant input",
+    "wrong chatbot",
+    "this is not related",
+    "can you drive car",
+    "do my homework",
+    "write essay for me",
+    "translate this sentence",
+    "convert pdf to word",
+    "how to learn machine learning",
+    "best programming language",
+    "how to start a business",
+    "what is entrepreneurship",
+    "how to invest money",
+    "what is stock market",
+    "how to meditate",
+    "best meditation techniques",
+    "how to improve sleep",
+    "tips for better sleep",
+    "how to manage stress",
+    "stress relief techniques",
+    "how to boost productivity",
+    "productivity hacks",
+    "how to learn a new language",
+    "best language learning apps",
+    "i need help with weather",
 ]
 
 
 labels = [
     #greetings
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
+    "greeting",
     "greeting",
     "greeting",
     "greeting",
@@ -478,6 +612,124 @@ labels = [
     "fallback",
     "fallback",
     "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+     "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",
+    "fallback",     
 ]
 
 
@@ -550,11 +802,11 @@ responses = {
     ],
 
     "history_university": [
-        "Kardan University was established in 2002 in Kabul by its founder Roeen Rahmani, making it the very first private university in Afghanistan. It began humbly, with only 15 students in a single classroom, at a time when higher education was just opening to private initiatives. By 2006, the Ministry of Higher Education officially granted it university status. Since then, Kardan has grown into a leading institution with thousands of students, offering undergraduate and graduate programs across disciplines like business, IT, engineering, and social sciences.",
-        "Kardan University was founded in 2002 by Roeen Rahmani, at a time when Afghanistan was opening to new opportunities in education. It began with only 15 students in a single classroom, offering short courses in business and management. The name “Kardan” means competence in Dari, reflecting its mission to build capable professionals. Within just a few years, the institute grew rapidly, and in 2006 it was officially recognized as a university by the Ministry of Higher Education. From those modest beginnings, Kardan expanded into multiple campuses in Kabul, offering undergraduate and graduate programs in business, IT, engineering, and social sciences. It became the first private university in Afghanistan, setting a model for others to follow. Over time, Kardan earned international accreditations, joined global networks, and launched research journals and policy forums. Today, it is known for producing thousands of graduates who contribute to Afghanistan’s development, while still carrying the spirit of its humble start.",
-        "Kardan University started its journey in 2002, during a time when Afghanistan was opening to private education. Its founder, Roeen Rahmani, began with a single classroom and a vision to transform learning. From those modest beginnings, Kardan grew rapidly, gaining recognition from the Ministry of Higher Education in 2006 and later achieving international accreditation. It has pioneered online education during the COVID-19 pandemic, launched graduate programs, and built a reputation as a center for excellence. Today, it stands as a symbol of progress, with thousands of students and alumni shaping Afghanistan’s future.",
-        "The journey of Kardan University began in 2002, when its founder Roeen Rahmani opened a small classroom with just 15 students. At that time, private higher education was unheard of in Afghanistan, so Kardan’s establishment was groundbreaking. By 2006, the Ministry of Higher Education granted it full university status, making it the first licensed private university in the country. Over the years, Kardan grew steadily, adding new faculties, programs, and campuses. It introduced graduate degrees, built strong international partnerships, and became the first Afghan university to join the Global Business School Network. Kardan also gained accreditation from organizations like ACBSP and IACBE, ensuring its programs met international standards. Today, it has educated more than 30,000 graduates, and is recognized as a leader in innovation, research, and quality education in Afghanistan. Its history is a story of vision, resilience, and growth from a single classroom to a respected institution.",
-        "The story of Kardan University is one of resilience and vision. Founded in 2002, it was Afghanistan’s first privately owned higher education institution, created to provide quality education during a period of national rebuilding. Starting with a handful of students, it quickly expanded and became a full university in 2006. Over the years, Kardan has achieved national and international accreditations (including ACBSP and IACBE) and has produced more than 30,000 graduates. Its journey reflects the broader transformation of Afghan education, from modest beginnings to global recognition."
+        "Kardan University was established in <b>2002</b> in Kabul by its founder Roeen Rahmani, making it the very first private university in Afghanistan. It began humbly, with only 15 students in a single classroom, at a time when higher education was just opening to private initiatives. By 2006, the Ministry of Higher Education officially granted it university status. Since then, Kardan has grown into a leading institution with thousands of students, offering undergraduate and graduate programs across disciplines like business, IT, engineering, and social sciences.",
+        "Kardan University was founded in <b>2002</b> by Roeen Rahmani, at a time when Afghanistan was opening to new opportunities in education. It began with only 15 students in a single classroom, offering short courses in business and management. The name “Kardan” means competence in Dari, reflecting its mission to build capable professionals. Within just a few years, the institute grew rapidly, and in 2006 it was officially recognized as a university by the Ministry of Higher Education. From those modest beginnings, Kardan expanded into multiple campuses in Kabul, offering undergraduate and graduate programs in business, IT, engineering, and social sciences. It became the first private university in Afghanistan, setting a model for others to follow. Over time, Kardan earned international accreditations, joined global networks, and launched research journals and policy forums. Today, it is known for producing thousands of graduates who contribute to Afghanistan’s development, while still carrying the spirit of its humble start.",
+        "Kardan University started its journey in <b>2002</b>, during a time when Afghanistan was opening to private education. Its founder, Roeen Rahmani, began with a single classroom and a vision to transform learning. From those modest beginnings, Kardan grew rapidly, gaining recognition from the Ministry of Higher Education in 2006 and later achieving international accreditation. It has pioneered online education during the COVID-19 pandemic, launched graduate programs, and built a reputation as a center for excellence. Today, it stands as a symbol of progress, with thousands of students and alumni shaping Afghanistan’s future.",
+        "The journey of Kardan University began in <b>2002</b>, when its founder Roeen Rahmani opened a small classroom with just 15 students. At that time, private higher education was unheard of in Afghanistan, so Kardan’s establishment was groundbreaking. By 2006, the Ministry of Higher Education granted it full university status, making it the first licensed private university in the country. Over the years, Kardan grew steadily, adding new faculties, programs, and campuses. It introduced graduate degrees, built strong international partnerships, and became the first Afghan university to join the Global Business School Network. Kardan also gained accreditation from organizations like ACBSP and IACBE, ensuring its programs met international standards. Today, it has educated more than 30,000 graduates, and is recognized as a leader in innovation, research, and quality education in Afghanistan. Its history is a story of vision, resilience, and growth from a single classroom to a respected institution.",
+        "The story of Kardan University is one of resilience and vision. Founded in <b>2002</b>, it was Afghanistan’s first privately owned higher education institution, created to provide quality education during a period of national rebuilding. Starting with a handful of students, it quickly expanded and became a full university in 2006. Over the years, Kardan has achieved national and international accreditations (including ACBSP and IACBE) and has produced more than 30,000 graduates. Its journey reflects the broader transformation of Afghan education, from modest beginnings to global recognition."
     ],
 
     "library": [
@@ -572,7 +824,7 @@ responses = {
         "Sorry, I didn’t catch that. I can only help with Kardan University topics — could you rephrase your question?",
         "I didn’t fully understand. Please ask something related to Kardan University so I can assist you properly.",
         "I’m having trouble understanding. Please ask something related to Kardan University admissions, programs, portal, or services.",
-        "I’m having a bit of trouble understanding your message. Just a reminder — I’m a Kardan University guide chatbot, so I can only help with topics like admissions, programs, portal access, fees, or campus information. If you can rephrase your question within these areas, I’ll gladly assist.",
+        "I’m a Kardan University guide chatbot, so I can only help with topics like admissions, programs, portal access, fees, or campus information. If you can rephrase your question within these areas, I’ll gladly assist.",
         "Sorry, I couldn’t interpret that clearly. Since I only provide information about Kardan University, I won’t be able to help with unrelated subjects. If you can tell me what Kardan University-related topic you need — registration, contacts, departments, or portal issues — I’ll guide you step by step.",
         "Sorry, I can only guide you about Kardan University, ask me any thing related-to University and i will try to do my best! "
     ]
@@ -586,11 +838,22 @@ responses = {
 def clean(text):
     text = text.lower().strip()
     text = "".join(c for c in text if c not in string.punctuation)
+
+    # 🔥 normalize common chat typos
+    replacements = {
+        "helo": "hello",
+        "hlo": "hello",
+        "hii": "hi",
+        "hiii": "hi",
+        "heyy": "hey",
+        "halo": "hello",
+        "hy": "hi"
+    }
+
+    for k, v in replacements.items():
+        text = text.replace(k, v)
+
     return text
-
-
-texts = [clean(t) for t in texts]
-
 
 # -----------------------------
 # 4. MODEL
@@ -602,7 +865,6 @@ X = vectorizer.fit_transform(texts)
 model = MultinomialNB()
 model.fit(X, labels)
 
-
 # -----------------------------
 # 5. TOP-2 INTENT LOGIC (FIXED)
 # -----------------------------
@@ -611,35 +873,40 @@ def predict_intents(user_input):
     text = clean(user_input)
     vec = vectorizer.transform([text])
 
-    # ✅ FIX 1: zero-vector check (unknown words)
     if vec.sum() == 0:
         return ["fallback"]
 
     probs = model.predict_proba(vec)[0]
-
-    # ✅ NEW: sort probabilities for smart decision
-    sorted_probs = np.sort(probs)[::-1]
-    max_conf = sorted_probs[0]
-
-    # ✅ FIX 2: smarter fallback logic
-    if max_conf < 0.45 or (sorted_probs[0] - sorted_probs[1]) < 0.10:
-        return ["fallback"]
-
     classes = model.classes_
+
     sorted_idx = probs.argsort()[::-1]
 
     intents = []
+
+    greeting = None
+    main_intents = []
+
     for i in sorted_idx:
-        confidence = probs[i]
+        intent = classes[i]
+        conf = probs[i]
 
-        # keep your threshold (good choice)
-        if confidence >= 0.25:
-            intents.append(classes[i])
+        if conf < 0.20:
+            continue
 
-        if len(intents) == 2:
+        if intent == "greeting" and greeting is None:
+            greeting = intent
+        else:
+            main_intents.append(intent)
+
+        if len(main_intents) == 2:
             break
 
-    # safety fallback (rare case)
+    # build final result
+    if greeting:
+        intents.append(greeting)
+
+    intents.extend(main_intents)
+
     if not intents:
         return ["fallback"]
 
@@ -654,10 +921,11 @@ def get_response(intents):
 
     # ✅ Define priority (lower number = higher priority)
     priority = {
-        "greeting": 0,
-        "goodbye": 1,
-        "thanks": 2,
-        "help": 3
+    "greeting": 0,
+    "help": 1,
+    "library": 2,
+    "history_university": 3,
+    "fallback": 99
     }
 
     # default priority for others
@@ -665,7 +933,7 @@ def get_response(intents):
         return priority.get(intent, 5)
 
     # ✅ Sort intents based on priority
-    intents = sorted(intents, key=get_priority)
+    intents = sorted(intents, key=lambda x: priority.get(x, 50))
 
     for intent in intents:
         if intent in responses:
