@@ -1,0 +1,57 @@
+body {
+  background-color: rgba(25, 25, 25, 1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.dotcontainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  width: 200px;
+  margin-top: -28px;
+}
+
+.logo {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.logo img {
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  border: solid white 3px;
+}
+
+.logotexts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.logotexts h1 {
+  color: whitesmoke;
+  font-family: "montserrat", sans-serif;
+  font-size: 1.9rem;
+}
+
+.dotcontainer p {
+  color: rgb(102, 254, 102);
+  font-family: "barlow", sans-serif;
+  font-size: 0.95rem;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: rgb(102, 254, 102);
+}

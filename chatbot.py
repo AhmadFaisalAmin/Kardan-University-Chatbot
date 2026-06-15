@@ -8,6 +8,7 @@ from sklearn.naive_bayes import MultinomialNB
 # -----------------------------
 # 1. DATASET 
 # -----------------------------
+
 with open("dataset.json", "r", encoding="utf-8") as f:
     raw_data = json.load(f)
 
