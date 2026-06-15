@@ -74,7 +74,7 @@ def predict_intents(user_input):
     text = clean(user_input)
     vec = vectorizer.transform([text])
 
-    if vec.sum() == 0:
+    if vec.sum() == 0: 
         return ["fallback"]
 
     probs = model.predict_proba(vec)[0]
