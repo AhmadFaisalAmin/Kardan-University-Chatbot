@@ -21,7 +21,7 @@ for item in intents:
     tag = item.get("tag") or item.get("tage")
     if not tag:
         continue
-
+    
     patterns = item.get("patterns", [])
     for text in patterns:
         texts.append(text)
