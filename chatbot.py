@@ -8,6 +8,7 @@ from sklearn.naive_bayes import MultinomialNB
 # 1. DATASET 
 # -----------------------------
 #faisal branch
+#abdullah
 texts = [
     #greetings
     "hello",
