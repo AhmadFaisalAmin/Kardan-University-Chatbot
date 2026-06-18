@@ -127,3 +127,218 @@ main {
   border-radius: 20px;
   height: 500px;
 }
+
+/* The form css design */
+.form_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  gap: 10px;
+
+}
+.form_logo {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.form_logo img {
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  border: solid white 3px;
+}
+.form_dotcontainer p {
+  color: rgb(102, 254, 102);
+  font-family: "barlow", sans-serif;
+  font-size: 0.95rem;
+}
+
+.form_logotexts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form_logotexts h1 {
+  color: whitesmoke;
+  font-family: "montserrat", sans-serif;
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px black;
+}
+
+.form_dotcontainer p {
+  color: rgb(102, 254, 102);
+  font-family: "barlow", sans-serif;
+  font-size: 0.8rem;
+}
+.form_dot {
+  margin-top: 5px;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: rgb(102, 254, 102);
+  animation: glowdot 1s ease infinite;
+}
+
+@keyframes glowdot {
+  0%,
+  100% {
+    box-shadow: 0 0 0 green;
+  }
+  50% {
+    box-shadow: 0 0 10px rgb(10, 172, 10);
+  }
+}
+
+.form_navbtnscontainer {
+  display: flex;
+  gap: 20px;
+}
+.form_navbtns {
+  padding: 15px;
+  font-size: 1rem;
+  border-radius: 20px;
+  font-family: "montserrat", sans-serif;
+  background-color: rgba(0, 0, 255, 0.164);
+  border: rgba(0, 0, 255, 0.332) 1px solid;
+  transition: 0.2s all;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 40px;
+  color: white;
+}
+.form_navbtns a,
+i {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s all;
+}
+.form_navbtns:hover {
+  background-color: rgba(0, 0, 255, 0.332);
+  scale: 1.05;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.form_navbtns:hover .fa-solid {
+  font-size: 4rem;
+  margin-left: -30px;
+  animation: gearspin 2s linear infinite;
+}
+
+@keyframes gearspin {
+  100% {
+    rotate: 360deg;
+  }
+}
+.form1_navbtns {
+  padding: 15px;
+  font-size: 1rem;
+  border-radius: 20px;
+  font-family: "montserrat", sans-serif;
+  background-color: rgba(0, 0, 255, 0.164);
+  border: rgba(0, 0, 255, 0.332) 1px solid;
+  transition: 0.2s all;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 40px;
+  color: white;
+}
+.form1_navbtns:hover {
+  transition: 0.3s all;
+  transform:translateX(-10px);
+  background-color: rgba(0, 0, 255, 0.332);
+}
+.form_contianer{
+  background-color: rgba(30, 30, 30, 1);
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  height: 100dvh;
+  
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(45, 45, 45);
+  padding: 20px;
+  width: 70%;
+  height: auto;
+  border-radius: 12px;
+}
+.form:hover {
+  transition: .3s all;
+  transform: scale(1.01,1.01);
+  box-shadow: 0px 0px 10px rgba(186, 185, 185, 0.484);
+}
+h2 {
+  font-family: "montserrat", sans-serif;
+  font-size: 1.5rem;
+}
+
+.form_content{
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.form_content label {
+  font-size: 1.25rem;
+  width: 100%;
+  margin: 10px;
+}
+.form_content input {
+  border-radius: 7px;
+  font-size: 1.1rem;
+  border: none;
+  padding: 0.6rem;
+  width: 100%;
+  margin: 10px;
+}
+.form_content textarea {
+  border-radius: 7px;
+  font-size: 1.1rem;
+  border: none;
+  padding: 0.6rem;
+  width: 100%;
+  margin: 10px;
+}
+.form button {
+  background-color: rgba(0, 0, 255, 0.204);
+  color: white;
+  font-size: 1.3rem;
+  padding: 12px;
+  width: 70%;
+  margin-top: 10px;
+  margin-left: 90px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+.form button:hover {
+  background-color: rgba(0, 0, 255, 0.332);
+  transition: 0.4s all;
+  transform: translateY(-6px);
+  box-shadow: 0px 0px 10px rgb(55, 61, 252);
+}
+.about_contianer{
+  width: 30%;
+}
+.form h4 {
+  margin-top: 30px;
+}
