@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Kardan University AI Assistant</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -44,9 +44,109 @@
       </div>
     </nav>
 
-    <!-- Main -->
     <main>
-      <div class="main-back"></div>
+      <div class="main-back">
+        <div class="chat-messages" id="chatMessages">
+          <div class="welcome-banner" id="welcomeBanner">
+            <div class="welcome-identity">
+              <div class="ai-badge">
+                <i class="fa-solid fa-robot"></i>
+              </div>
+              <div class="ai-badge-text">
+                <span class="ai-badge-name">Kardan AI</span>
+              </div>
+            </div>
+
+            <h2 class="welcome-title">How can I help you today?</h2>
+            <p class="welcome-sub">Ask me anything about Kardan University</p>
+
+            <div class="tip-strip">
+              <i class="fa-solid fa-lightbulb tip-icon"></i>
+              <span id="tipText">You can ask about the admission process</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="chat-input-area">
+          <input
+            type="text"
+            id="userInput"
+            class="chat-input"
+            placeholder="Ask about admissions, programs, campus..."
+            autocomplete="off"
+          />
+          <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+
+        <div class="chat-toolbar">
+          <button class="toolbar-btn clear-btn" onclick="clearChat()">
+            <i class="fa-solid fa-trash-can"></i>
+            Clear Chat
+          </button>
+
+          <div class="quick-dropdown" id="quickDropdown">
+            <button class="toolbar-btn quick-btn" onclick="toggleDropdown()">
+              <i class="fa-solid fa-bolt"></i>
+              Quick Questions
+              <i class="fa-solid fa-chevron-down qd-arrow" id="qdArrow"></i>
+            </button>
+            <div class="quick-menu" id="quickMenu">
+              <div
+                class="quick-option"
+                onclick="quickSend('Tell me about the admission process')"
+              >
+                <i class="fa-solid fa-file-pen"></i> Admission Process
+              </div>
+              <div
+                class="quick-option"
+                onclick="quickSend('What are the admission requirements?')"
+              >
+                <i class="fa-solid fa-list-check"></i> Admission Requirements
+              </div>
+              <div
+                class="quick-option"
+                onclick="quickSend('Tell me about the library')"
+              >
+                <i class="fa-solid fa-book"></i> Library Services
+              </div>
+              <div
+                class="quick-option"
+                onclick="quickSend('What programs does Kardan offer?')"
+              >
+                <i class="fa-solid fa-graduation-cap"></i> Programs Offered
+              </div>
+              <div
+                class="quick-option"
+                onclick="quickSend('Tell me about Kardan University history')"
+              >
+                <i class="fa-solid fa-landmark"></i> University History
+              </div>
+              <div
+                class="quick-option"
+                onclick="quickSend('What is the MBA program?')"
+              >
+                <i class="fa-solid fa-briefcase"></i> MBA Program
+              </div>
+              <div
+                class="quick-option"
+                onclick="quickSend('Tell me about data science program')"
+              >
+                <i class="fa-solid fa-chart-bar"></i> Data Science
+              </div>
+              <div
+                class="quick-option"
+                onclick="quickSend('What are the campus addresses?')"
+              >
+                <i class="fa-solid fa-location-dot"></i> Campus Addresses
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
