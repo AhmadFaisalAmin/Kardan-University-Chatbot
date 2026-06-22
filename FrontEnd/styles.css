@@ -114,17 +114,17 @@ i {
   font-size: 1.3rem;
 }
 .navbtns:hover .fa-circle-question {
-  animation: helpanim 1s ease infinite;
+  animation: helpanim 0.8s ease infinite;
   font-size: 4rem;
-  margin-left: -32px;
+  margin-left: -44px;
 }
 @keyframes helpanim {
   0%,
   100% {
-    font-size: 3rem;
+    font-size: 3.1rem;
   }
   50% {
-    font-size: 3.6rem;
+    font-size: 3.5rem;
   }
 }
 main {
@@ -410,12 +410,12 @@ main {
   gap: 12px;
   padding: 14px 24px 15px 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
-  background-color: rgb(34, 34, 37);
+  background-color: rgba(55, 55, 55, 0.577);
   justify-content: center;
 }
 .chat-input {
   flex: 1;
-  background-color: rgba(40, 40, 52, 1);
+  background-color: rgb(39, 38, 38);
   border: 1px solid rgba(0, 0, 255, 0.28);
   border-radius: 12px;
   padding: 12px 18px;
