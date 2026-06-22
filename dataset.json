@@ -1426,6 +1426,7 @@
       "patterns": [
         "what labs does kardan have",
         "tell me about kardan labs",
+        "tell me about labs in kardan",
         "lab facilities kardan university",
         "what laboratories are available",
         "kardan university labs list",
@@ -1477,6 +1478,7 @@
       "tage":"innovation_lab",
       "patterns": [
         "tell me about innovation lab",
+        "tell me about innovation lab in kardan",
         "what is i lab kardan",
         "innovation lab kardan university",
         "i lab details",
@@ -1529,6 +1531,7 @@
       "tage":"cisco_lab",
       "patterns": [
         "tell me about cisco lab",
+        "tell me about cisco lab in kardan",
         "what is cisco lab kardan",
         "cisco lab kardan university",
         "cc lab kardan",
@@ -1581,6 +1584,7 @@
       "tage":"Engineering_Lab",
       "patterns":[
         "tell me about engineering lab",
+        "tell me about engineering lab in kardan",
         "what is engineering lab kardan",
         "engineering lab kardan university",
         "eng lab kardan",
