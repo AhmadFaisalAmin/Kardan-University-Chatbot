@@ -849,7 +849,8 @@
     {
       "tage": "journalism",
       "patterns": [
-        " tell me about the journalism in kardan",
+        "tell me about the journalism",
+        "tell me about the journalism in kardan",
         "tell me about journalism program",
         "what is bachelor of journalism",
         "journalism bachelor degree kardan",
@@ -905,6 +906,9 @@
     {
       "tage": "law",
       "patterns": [
+        "tell me about law",
+        "tell me about law in kardan",
+        "tell me about the kardan law",
         "tell me about the kardan law programs",
         "tell me about law program",
         "what is bachelor of law",
@@ -961,6 +965,8 @@
     {
       "tage": "scholarships",
       "patterns": [
+        "tell me about the scholarship",
+        "tell me about the scholarship in kardan",
         "give in formation about the scholarship in kardan",
         "what scholarships does kardan offer",
         "how to get a scholarship",
@@ -1017,6 +1023,8 @@
     {
       "tage": "master_programs",
       "patterns": [
+        "tell me about the master",
+        "tell me about the master in kardan",
         "tell me about the master programs",
         "what master programs does kardan offer",
         "masters degree programs at kardan",
@@ -1073,6 +1081,8 @@
     {
       "tage": "master_science_datascience",
       "patterns": [
+        "tell me about data science master",
+        "tell me about data science master in kardan",
         "tell me about data science master program",
         "what is msds at kardan",
         "master of science in data science",
@@ -1128,7 +1138,11 @@
     {
       "tage": "master_business _administration",
       "patterns": [
+        "tell me about mba",
+        "tell me about mba in kardan",
         "tell me about mba program",
+        "tell me about master of business administration",
+        "tell me about master of business administration in kardan",
         "what is master of business administration",
         "mba at kardan university",
         "masters in business administration kardan",
@@ -1183,6 +1197,8 @@
     {
       "tage": "masters_international_relations",
       "patterns": [
+        "tell me about international relations master",
+        "tell me about international relations master in kardan",
         "tell me about international relations master program",
         "what is masters in international relations",
         "ir masters kardan",
@@ -1238,6 +1254,8 @@
     {
       "tage": "mastersi_nternational_law",
       "patterns": [
+        "tell me about international law master",
+        "tell me about international law master in kardan",
         "tell me about international law master program",
         "what is llm in international law",
         "llm il kardan",
@@ -1293,6 +1311,8 @@
     {
       "tage": "masters_corporate_law",
       "patterns": [
+        "tell me about corporate law master",
+        "tell me about corporate law master in kardan",
         "tell me about corporate law master program",
         "what is llm in corporate law",
         "llm cl kardan",
@@ -1349,6 +1369,7 @@
       "tage": "masters_construction_engineering",
       "patterns": [
         "tell me about construction engineering management master",
+        "tell me about construction engineering management master in kardan",
         "what is mcem at kardan",
         "masters in construction engineering management",
         "mcem program details",
