@@ -1461,7 +1461,7 @@
         "lab facilities help me",
         "which labs can i use"
       ],
-      "responses":[
+      "responses": [
         "Kardan University offers specialized, hands-on learning facilities — known as Kardan Labs — where students turn classroom theories into real-world skills. 🧪 Here are all the labs available to you:<br><br>🧠 <b>Innovation Lab (i-Lab)</b> — A collaborative hub for Computer Science and Engineering students. Use open-source hardware and software to build working prototypes like smartphone-controlled light switches or gesture-controlled drones<br>🌐 <b>CISCO Lab</b> — Dedicated to networking students. Get practical training in network protocols and prepare for globally recognized CISCO certifications<br>🏗️ <b>Engineering Lab</b> — Fully equipped for Civil and general engineering students. Conduct material testing, quality control, and explore solutions to real-world infrastructure problems<br>⚖️ <b>Law Labs</b> — Includes a Criminal Technique Lab and a Moot Court where law students practice trial techniques and participate in international moot court competitions<br><br>All labs are supported by faculty members, industry experts, and alumni to foster entrepreneurship and technical readiness. For more details on any specific lab, just ask! 🔬",
         "Kardan Labs are where innovation meets practice! 🚀 Kardan University provides specialized experiential learning facilities designed to give students real, tangible skills. Here's what's available:<br><br>🧠 <b>Innovation Lab (i-Lab)</b> — Build prototypes using open-source hardware and software. Past projects include smartphone-controlled devices and gesture-controlled drones<br>🌐 <b>CISCO Lab</b> — Gain hands-on networking experience and prepare for CISCO certification exams with real network protocols training<br>🏗️ <b>Engineering Lab</b> — Civil and general engineering students can perform material testing, quality control, and tackle infrastructure challenges<br>⚖️ <b>Law Labs</b> — Featuring a Criminal Technique Lab for forensic practice and a Moot Court for trial simulation and international competition preparation<br><br>These labs are backed by dedicated faculty, industry professionals, and alumni mentors. Which lab interests you? 💡",
         "Get ready to learn by doing at Kardan University! 🎓 The Kardan Labs offer practical, experiential learning across multiple disciplines. Here's the complete list:<br><br>🧠 <b>Innovation Lab (i-Lab)</b> — A creative space for CS and Engineering students to prototype inventions using open-source tools<br>🌐 <b>CISCO Lab</b> — The go-to facility for networking students aiming to master protocols and earn CISCO certifications<br>🏗️ <b>Engineering Lab</b> — Equipped for material testing and quality control, helping civil and general engineering students solve real infrastructure problems<br>⚖️ <b>Law Labs</b> — Includes a Criminal Technique Lab and Moot Court where aspiring lawyers practice courtroom skills and compete internationally<br><br>Faculty, industry experts, and alumni all contribute to making these labs a launchpad for entrepreneurship and technical excellence. 🔧",
@@ -1475,7 +1475,7 @@
       ]
     },
     {
-      "tage":"innovation_lab",
+      "tage": "innovation_lab",
       "patterns": [
         "tell me about innovation lab",
         "tell me about innovation lab in kardan",
@@ -1528,7 +1528,7 @@
       ]
     },
     {
-      "tage":"cisco_lab",
+      "tage": "cisco_lab",
       "patterns": [
         "tell me about cisco lab",
         "tell me about cisco lab in kardan",
@@ -1581,8 +1581,8 @@
       ]
     },
     {
-      "tage":"Engineering_Lab",
-      "patterns":[
+      "tage": "Engineering_Lab",
+      "patterns": [
         "tell me about engineering lab",
         "tell me about engineering lab in kardan",
         "what is engineering lab kardan",
@@ -1620,7 +1620,7 @@
         "engineering lab help pls",
         "civil lab help me"
       ],
-      "responses":[
+      "responses": [
         "The Engineering Lab at Kardan University — often called the ENG Lab or EN Lab — is a fully equipped facility designed for Civil and general engineering students to gain hands-on experience with real-world materials and infrastructure challenges. 🏗️ This lab is where theory meets practice: you will conduct material testing, perform quality control assessments, and explore solutions to actual infrastructure problems. The lab features industry-standard equipment for testing construction materials like concrete, steel, soil, and aggregates, ensuring you understand how materials behave under different conditions. Quality assurance is a major focus — you will learn how to evaluate whether materials and processes meet required standards and specifications. The Engineering Lab also supports research and problem-solving related to Afghanistan's infrastructure needs, including roads, bridges, buildings, and water systems. Faculty members with professional engineering experience guide students through experiments and projects, while industry experts and alumni contribute mentorship and real-world insights. The lab reflects Kardan University's commitment to experiential learning, producing graduates who are technically skilled and ready to contribute to the construction and engineering sectors. For Spring 2026, the Engineering Lab is open and fully operational for student use. 🔧",
         "Kardan University's Engineering Lab — also known as the ENG Lab, EN Lab, or Civil Engineering Lab — is where future engineers develop practical skills that classrooms alone cannot provide. 🏢 This specialized facility is built for Civil and general engineering students who need to test materials, ensure quality control, and find solutions to infrastructure problems. The lab is equipped with tools and machines for testing the strength, durability, and composition of construction materials such as concrete, steel, and soil. You will learn how to perform standardized tests, analyze results, and make informed decisions about material suitability for different projects. Quality control procedures are practiced extensively, preparing you for roles where safety and compliance are critical. The lab also serves as an innovation space where students can explore solutions to real infrastructure challenges facing communities. Faculty guidance ensures that experiments are both educational and aligned with industry standards. Supported by alumni and industry professionals, the Engineering Lab is a cornerstone of Kardan's hands-on education model. 🎓",
         "The ENG Lab (Engineering Lab) at Kardan University is a dedicated space for Civil and general engineering students to apply their knowledge to tangible materials and real-world problems. 🔬 This lab focuses on three core areas: material testing, quality control, and infrastructure solutions. You will work with concrete samples, steel reinforcement, soil specimens, and other construction materials, learning how to test for strength, durability, and compliance with engineering standards. Quality control processes are emphasized — understanding how to ensure that materials and construction methods meet regulatory and safety requirements. The lab also encourages creative problem-solving, allowing students to investigate infrastructure challenges like road deterioration, building stability, and water management systems. Experienced faculty members supervise all lab activities, providing technical guidance and industry context. The Engineering Lab is part of Kardan University's broader commitment to experiential learning, ensuring that graduates have both theoretical knowledge and practical competence. For Spring 2026, this essential facility is fully accessible. 💪",
@@ -1632,11 +1632,6 @@
         "The Engineering Lab (ENG Lab / EN Lab) at Kardan University is a critical resource for students in Civil and general engineering programs. 🏢 This lab is equipped to support material testing across a range of construction substances — concrete, steel reinforcement, soil, and aggregates. You will learn to evaluate material strength, durability, and compliance with engineering standards through hands-on experiments. Quality control is a major component of the lab curriculum, ensuring you understand how to maintain high standards in construction projects. In addition to testing, the lab provides opportunities to explore solutions for real-world infrastructure problems, from improving road durability to designing more resilient buildings. Faculty members with engineering backgrounds lead lab sessions, while alumni and industry professionals offer additional support and mentorship. The Engineering Lab reflects Kardan's mission to blend academic rigor with practical skill development, making graduates ready for the demands of the engineering profession. Spring 2026 lab sessions are open. 🔧",
         "The Engineering Lab — known across campus as the ENG Lab, EN Lab, or Civil Lab — at Kardan University is where future engineers build their practical foundation. 🧱 This facility is designed exclusively for Civil and general engineering students to conduct material testing, perform quality control assessments, and develop infrastructure solutions. The lab is stocked with modern testing equipment for evaluating concrete, steel, soil, and aggregates. You will learn standardized testing procedures, data analysis, and professional reporting techniques. Quality assurance processes are integrated into every activity, reflecting the high standards required in the engineering industry. The lab also supports innovative student projects aimed at addressing Afghanistan's infrastructure needs — from sustainable building materials to improved water systems. Faculty with industry experience provide supervision and mentorship, while alumni networks contribute career guidance and technical insights. The Engineering Lab is a core component of Kardan University's experiential learning approach, ensuring you graduate with tangible, marketable skills. 💼"
       ]
-    },
-    {
-      "tage":"New-Topic",
-      "patterns":[],
-      "responses":[]
     }
   ]
 }
