@@ -98,7 +98,7 @@ i {
   font-weight: 500;
   cursor: pointer;
 }
-.navbtns:hover .fa-solid {
+.navbtns:hover .fa-gear {
   font-size: 4rem;
   margin-left: -30px;
   animation: gearspin 2s linear infinite;
@@ -108,7 +108,22 @@ i {
     rotate: 360deg;
   }
 }
-
+.helpcircle {
+  font-size: 1.8rem;
+}
+.navbtns:hover .fa-circle-question {
+  animation: helpanim 2s linear infinite;
+  font-size: 4rem;
+  margin-left: -32px;
+}
+@keyframes helpanim {
+  0%,
+  100% {
+  }
+  50% {
+    font-size: 1.7rem;
+  }
+}
 main {
   padding: 0 50px 40px 50px;
   margin-top: -10px;
