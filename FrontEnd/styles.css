@@ -91,6 +91,7 @@ i {
   color: white;
   text-decoration: none;
   transition: 0.3s all;
+  font-size: 1.3rem;
 }
 .navbtns:hover {
   background-color: rgba(0, 0, 255, 0.332);
@@ -108,20 +109,22 @@ i {
     rotate: 360deg;
   }
 }
+
 .helpcircle {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
 }
 .navbtns:hover .fa-circle-question {
-  animation: helpanim 2s linear infinite;
+  animation: helpanim 1s ease infinite;
   font-size: 4rem;
   margin-left: -32px;
 }
 @keyframes helpanim {
   0%,
   100% {
+    font-size: 3rem;
   }
   50% {
-    font-size: 1.7rem;
+    font-size: 3.6rem;
   }
 }
 main {
@@ -130,7 +133,7 @@ main {
 }
 
 .main-back {
-  background-color: rgba(30, 30, 30, 1);
+  background-color: rgb(39, 38, 38);
   border-radius: 20px;
   width: 100%;
   height: calc(100vh - 175px);
@@ -407,7 +410,7 @@ main {
   gap: 12px;
   padding: 14px 24px 8px 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
-  background-color: rgba(25, 25, 30, 0.9);
+  background-color: rgb(34, 34, 37);
 }
 .chat-input {
   flex: 1;
@@ -560,4 +563,118 @@ main {
   width: 16px;
   text-align: center;
   font-size: 0.85rem;
+}
+
+/* help page */
+.mainform {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  margin-top: -30px;
+  gap: 30px;
+}
+
+.helppagetexts {
+  width: 50%;
+  box-sizing: border-box;
+  text-align: justify;
+  line-height: 30px;
+  padding: 60px;
+  height: 71vh;
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 139, 0.35),
+    rgba(3, 68, 125, 0.4),
+    rgba(0, 0, 139, 0.35)
+  );
+  overflow-y: scroll;
+  border-radius: 20px;
+  animation: glowhelppagetexts 2s ease;
+  box-shadow: 5px 5px 10px black;
+}
+
+.helppagetexts ul {
+  list-style-position: inside;
+  margin-top: 10px;
+  font-weight: 550;
+  font-family: "barlow", sans-serif;
+}
+
+.helppagetexts h2 {
+  color: white;
+  font-family: "montserrat", sans-serif;
+  text-shadow: 0 0 3px black;
+}
+
+.helppagetexts h3 {
+  color: white;
+  text-shadow: 0 0 3px black;
+  font-family: "montserrat", sans-serif;
+}
+
+.helppagetexts p,
+ul {
+  color: white;
+  font-family: "barlow", sans-serif;
+  font-size: 1.3rem;
+  text-shadow: 0 0 3px black;
+}
+
+.mainform form {
+  width: 50%;
+  box-sizing: border-box;
+  background-color: rgb(39, 38, 38);
+  height: 71vh;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.helpform label {
+  color: rgba(240, 255, 255, 0.541);
+  font-family: "montserrat", sans-serif;
+  font-size: 1rem;
+}
+
+.helpform h2 {
+  color: white;
+  font-family: "montserrat", sans-serif;
+}
+
+.helpform input,
+textarea {
+  width: 100%;
+  margin-top: 5px;
+  color: rgba(0, 89, 169, 1);
+  font-size: 1rem;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 5px black;
+  font-family: "barlow", sans-serif;
+}
+
+.helpform input:focus {
+  background-color: rgba(19, 19, 240, 0.09);
+  font-weight: 600;
+  outline: none;
+}
+
+.helpform textarea:focus {
+  background-color: rgba(19, 19, 240, 0.09);
+  font-weight: 600;
+  outline: none;
+}
+
+.submitbtn {
+  font-weight: bold;
+  background-color: rgba(19, 19, 240, 0.332);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submitbtn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.116);
 }
