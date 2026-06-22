@@ -35,17 +35,12 @@
             Settings
           </div>
         </a>
-        <a href="help.html" style="text-decoration: none">
-        <a href="about.html" style="text-decoration: none">
-          <div class="navbtns">
-
-        <a href="#" style="text-decoration: none">
-          <div class="navbtns helpcircle">
-            <i class="fa-solid fa-circle-question"></i>
+        <a href="help.html" style="text-decoration: none;"> 
+        <div class="navbtns">
+           <i class="fa-solid fa-circle-question"></i>
             Help
-          </div>
-        </a>
       </div>
+      </a>
     </nav>
 
     <main>
@@ -79,16 +74,6 @@
             placeholder="Ask about admissions, programs, campus..."
             autocomplete="off"
           />
-          <button class="send-btn" id="sendBtn" onclick="sendMessage()" title="jd">
-            <i class="fa-solid fa-paper-plane"></i>
-          </button>
-        </div>
-
-        <div class="chat-toolbar">
-          <button class="toolbar-btn clear-btn" onclick="clearChat()">
-            <i class="fa-solid fa-trash-can"></i>
-            Clear Chat
-          </button>
 
           <div class="quick-dropdown" id="quickDropdown">
             <button class="toolbar-btn quick-btn" onclick="toggleDropdown()">
@@ -147,6 +132,15 @@
               </div>
             </div>
           </div>
+
+          <button
+            class="send-btn"
+            id="sendBtn"
+            onclick="sendMessage()"
+            title="jd"
+          >
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
         </div>
       </div>
     </main>
