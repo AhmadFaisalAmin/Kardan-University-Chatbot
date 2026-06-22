@@ -5,7 +5,8 @@ import re
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
-#latest update
+
+# latest update
 # -----------------------------
 # 1. DATASET
 # -----------------------------
@@ -32,6 +33,7 @@ for item in intents:
 
 print(f"Loaded {len(set(labels))} intents, {len(texts)} total patterns")
 
+
 # -----------------------------
 # 3. CLEANING
 # -----------------------------
@@ -47,11 +49,12 @@ def clean(text):
         "hiii": "hi",
         "heyy": "hey",
         "halo": "hello",
-        "hy": "hi"
+        "hy": "hi",
     }
     for k, v in replacements.items():
-        text = re.sub(r'\b' + k + r'\b', v, text)
+        text = re.sub(r"\b" + k + r"\b", v, text)
     return text
+
 
 # IMPORTANT: clean training texts too so model and input match
 cleaned_texts = [clean(t) for t in texts]
@@ -71,6 +74,7 @@ X = vectorizer.fit_transform(cleaned_texts)
 
 model = MultinomialNB(alpha=0.3)
 model.fit(X, labels)
+
 
 # -----------------------------
 # 5. TOP-2 INTENT LOGIC
@@ -120,6 +124,7 @@ def predict_intents(user_input):
 
     return result_intents
 
+
 # -----------------------------
 # 6. RESPONSE SYSTEM
 # -----------------------------
@@ -132,7 +137,7 @@ def get_response(detected_intents):
         "help": 1,
         "library": 2,
         "history_university": 3,
-        "fallback": 99
+        "fallback": 99,
     }
 
     def get_priority(intent):
@@ -146,6 +151,7 @@ def get_response(detected_intents):
             result.append(random.choice(responses[intent]))
 
     return "\n".join(result)
+
 
 # -----------------------------
 # 7. CHAT LOOP
