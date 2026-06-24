@@ -1,20 +1,22 @@
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from chatbot import predict_intents, get_response
+import os
 
-app = Flask(__name__, static_folder='frontend')  # <-- this tells Flask where your frontend files are
+app = Flask(__name__, static_folder='frontend')
 CORS(app)
 
-# -------- THIS ROUTE IS MISSING --------
+# ----- ROOT ROUTE (this is what's missing) -----
 @app.route('/')
 def serve_index():
     return send_from_directory('frontend', 'index.html')
 
+# ----- SERVE ALL STATIC FILES -----
 @app.route('/<path:filename>')
 def serve_static(filename):
     return send_from_directory('frontend', filename)
-# ---------------------------------------
 
+# ----- CHAT API -----
 @app.route('/chat', methods=['POST'])
 def chat():
     data = request.get_json()
