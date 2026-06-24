@@ -1002,9 +1002,10 @@ main {
   .mainform form {
     width: 100%;
     height: auto;
-    max-height: 50vh;
+    max-height: none; /* remove the 50vh limit */
     padding: 20px;
     border-radius: 14px;
+    overflow-y: auto; /* scroll if content overflows */
   }
   .helppagetexts p,
   .helppagetexts ul {
@@ -1076,6 +1077,9 @@ main {
   .mainform {
     flex-direction: column-reverse;
     gap: 30px;
+  }
+  .helpform {
+    height: 300px;
   }
   .helppagetexts {
     margin-top: 30px;
