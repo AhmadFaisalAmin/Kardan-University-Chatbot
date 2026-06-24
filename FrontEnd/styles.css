@@ -232,7 +232,6 @@ nav {
     font-size: 3.5rem;
   }
 }
-
 /* ============================
    SETTINGS DROPDOWN (FIXED)
    ============================ */
@@ -825,37 +824,208 @@ main {
 }
 
 /* ============================
-   RESPONSIVE (basic)
+   RESPONSIVE (all screens)
    ============================ */
+
+/* Small devices (phones, 768px and down) */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     padding: 20px;
   }
-  .navbtnscontainer {
-    flex-wrap: wrap;
+
+  .logo {
+    gap: 12px;
+    width: 100%;
     justify-content: center;
   }
+  .logo img {
+    height: 45px;
+    width: 45px;
+  }
+  .logotexts h1 {
+    font-size: 1.2rem;
+  }
+  .dotcontainer {
+    width: auto;
+    gap: 6px;
+  }
+  .dotcontainer p {
+    font-size: 0.8rem;
+  }
+  .dot {
+    height: 10px;
+    width: 10px;
+  }
+
+  .navbtnscontainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+  .navbtns {
+    width: 100%;
+    max-width: 200px;
+    justify-content: center;
+    height: 45px;
+    font-size: 0.9rem;
+  }
+  .navbtns i {
+    font-size: 1rem;
+  }
+
+  /* Settings dropdown – center on mobile */
+  .dropdown-content {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px; /* matches button height */
+    min-width: 180px;
+  }
+
+  main {
+    padding: 0 15px 20px 15px;
+  }
+  .main-back {
+    height: calc(100vh - 200px);
+    border-radius: 14px;
+  }
+  .chat-messages {
+    padding: 16px;
+    gap: 12px;
+  }
+  .welcome-banner {
+    padding: 20px;
+    gap: 12px;
+  }
+  .welcome-title {
+    font-size: 1.2rem;
+  }
+  .welcome-sub {
+    font-size: 0.9rem;
+  }
+  .ai-badge {
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+  }
+  .ai-badge-name {
+    font-size: 1rem;
+  }
+  .tip-strip {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  .message {
+    max-width: 90%;
+  }
+  .message-bubble {
+    font-size: 0.9rem;
+    padding: 10px 14px;
+  }
+
+  .chat-input-area {
+    padding: 10px 16px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .chat-input {
+    font-size: 0.9rem;
+    padding: 10px 14px;
+    min-width: 0;
+    flex: 1 1 60%;
+  }
+  .send-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 0.9rem;
+  }
+  .quick-btn {
+    height: 38px;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+  .quick-menu {
+    min-width: 180px;
+    bottom: 105%;
+  }
+  .quick-option {
+    font-size: 0.85rem;
+    padding: 8px 14px;
+  }
+
+  /* Help page */
   .mainform {
     flex-direction: column;
     padding: 20px;
+    margin-top: -20px;
+    gap: 20px;
   }
   .helppagetexts,
   .mainform form {
     width: 100%;
     height: auto;
-    max-height: 60vh;
-    padding: 30px;
+    max-height: 50vh;
+    padding: 25px;
   }
-  .chat-input-area {
-    flex-wrap: wrap;
+  .helppagetexts p,
+  .helppagetexts ul {
+    font-size: 1rem;
+    line-height: 26px;
   }
-  .quick-dropdown {
-    width: 100%;
+  .helppagetexts h2 {
+    font-size: 1.4rem;
   }
-  .quick-btn {
-    width: 100%;
-    justify-content: center;
+  .helppagetexts h3 {
+    font-size: 1.1rem;
+  }
+  .helpform {
+    padding: 25px !important; /* overrides inline if any */
+  }
+  .helpform input,
+  .helpform textarea {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+  .submitbtn {
+    padding: 10px;
+    font-size: 0.95rem;
   }
 }
+
+/* Tablets and small laptops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  nav {
+    padding: 30px 30px;
+  }
+  .logotexts h1 {
+    font-size: 1.4rem;
+  }
+  .navbtns {
+    width: 120px;
+    height: 38px;
+    font-size: 0.9rem;
+  }
+  .main-back {
+    height: calc(100vh - 150px);
+  }
+  .mainform {
+    padding: 30px 30px;
+    gap: 25px;
+  }
+  .helppagetexts,
+  .mainform form {
+    padding: 35px;
+    height: 65vh;
+  }
+  .helppagetexts p,
+  .helppagetexts ul {
+    font-size: 1.1rem;
+  }
+}
+
+/* Large screens (1025px and up) – default styles already applied, nothing extra needed */
