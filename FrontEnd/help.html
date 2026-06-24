@@ -16,7 +16,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
   </head>
-  <body style="overflow-y: hidden">
+  <body>
     <nav>
       <div class="logo">
         <img src="kardanlogo.png" alt="Kardan University Logo" />
@@ -29,12 +29,30 @@
         </div>
       </div>
       <div class="navbtnscontainer">
-        <a href="#" style="text-decoration: none">
-          <div class="navbtns">
+        <!-- Settings Dropdown (same as index) -->
+        <div class="settings-dropdown">
+          <div class="navbtns settings-btn">
             <i class="fa-solid fa-gear"></i>
             Settings
           </div>
-        </a>
+          <div class="dropdown-content">
+            <div class="dropdown-item">
+              <span>Theme</span>
+              <label class="switch">
+                <input type="checkbox" id="themeToggle" />
+                <span class="slider round"></span>
+              </label>
+            </div>
+            <!-- Clear Chat button (does nothing on help page, but we keep it for consistency) -->
+            <div class="dropdown-item clear-chat-item">
+              <span>Clear Chat</span>
+              <button class="clear-chat-btn" onclick="clearChat()">
+                <i class="fa-solid fa-trash-can"></i> Clear
+              </button>
+            </div>
+          </div>
+        </div>
+
         <a href="index.html" style="text-decoration: none">
           <div class="navbtns helpcircle">
             <i class="fa-regular fa-comment-dots"></i>
@@ -123,7 +141,7 @@
         <h3>Our Team</h3>
 
         <p>
-          We made this project with a team of 3 memebers:<br />
+          We made this project with a team of 3 members:<br />
           Ahmad Faisal Amin <br />
           Abdullah Anwar <br />
           Fardows Momand <br />
@@ -132,24 +150,30 @@
         <p>Thank you for using the Kardan University Chatbot.</p>
       </div>
 
-      <form class="helpform">
+      <form class="helpform" action="/submit" method="POST">
         <h2>Let's Get in Touch!</h2>
         <br />
-        <label for="name" required>Name:</label><br />
-        <input type="text" name="name" /><br /><br />
-        <label for="email" required>Email:</label><br />
-        <input type="email" name="email" /><br /><br />
+        <label for="name">Name:</label><br />
+        <input type="text" name="name" id="name" required /><br /><br />
+        <label for="email">Email:</label><br />
+        <input type="email" name="email" id="email" required /><br /><br />
         <label for="subject">Subject:</label><br />
-        <input type="text" name="subject" /><br /><br />
-        <label for="message" required>Message:</label><br />
-        <textarea name="message"></textarea><br /><br />
+        <input type="text" name="subject" id="subject" /><br /><br />
+        <label for="message">Message:</label><br />
+        <textarea name="message" id="message" required></textarea><br /><br />
         <input
           type="submit"
           value="Submit Message"
           class="submitbtn"
-          style="color: white"
+          style="
+            color: white;
+            background-color: rgba(0, 0, 139, 0.715);
+            transition: 0.3s all ease;
+          "
         />
       </form>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
