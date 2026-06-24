@@ -1076,6 +1076,10 @@ main {
   .mainform {
     flex-direction: column-reverse;
   }
+  .helpform {
+    height: fit-content;
+    padding: 100px 50px;
+  }
   .helppagetexts p {
     line-height: 20px;
   }
