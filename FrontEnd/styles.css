@@ -1080,7 +1080,6 @@ main {
   }
   .mainform {
     flex-direction: column-reverse;
-    gap: 30px;
   }
   .helpform {
     height: 300px;
