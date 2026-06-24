@@ -414,6 +414,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: auto;
+  margin-bottom: 10px;
   font-size: 1.5rem;
   color: white;
   animation: badgePulse 2.5s ease-in-out infinite;
