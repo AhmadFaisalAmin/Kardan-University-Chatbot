@@ -1073,6 +1073,12 @@ main {
     left: -70px;
     scale: 0.9;
   }
+  .mainform {
+    flex-direction: column-reverse;
+  }
+  .helppagetexts p {
+    line-height: 20px;
+  }
 }
 
 /* Tablets (769px - 1024px) – keep original but fine-tune */
