@@ -60,13 +60,6 @@ cleaned_texts = [clean(t) for t in texts]
 
 # -----------------------------
 # 4. MODEL
-# # Why TfidfVectorizer instead of CountVectorizer:
-# - TF-IDF weighs rare/meaningful words higher and common words lower
-# - Much better accuracy for short chatbot messages
-# - ngram_range(1,2) captures both single words and two-word phrases
-# # Why alpha=0.3:
-# - Default alpha=1.0 over-smooths on small datasets
-# - Lower alpha makes the model more decisive and accurate
 # -----------------------------
 vectorizer = TfidfVectorizer(ngram_range=(1, 2), min_df=1)
 X = vectorizer.fit_transform(cleaned_texts)
@@ -100,8 +93,7 @@ def predict_intents(user_input):
         intent = classes[i]
         conf = probs[i]
 
-        # Threshold of 0.10 works well with 25 tags — confidence spreads thin
-        # across many tags, so 0.35 was too strict and caused everything to fallback
+        # Threshold of 0.10 works well with 25 tags
         if conf < 0.10:
             continue
 
@@ -153,13 +145,14 @@ def get_response(detected_intents):
 
 
 # -----------------------------
-# 7. CHAT LOOP
+# 7. CHAT LOOP (only runs when script is executed directly)
 # -----------------------------
-print("Kardan University Chatbot running... type 'quit' to stop")
-while True:
-    user = input("You: ")
-    if user.lower() == "quit":
-        break
-    detected_intents = predict_intents(user)
-    reply = get_response(detected_intents)
-    print("Bot:", reply)
+if __name__ == "__main__":
+    print("Kardan University Chatbot running... type 'quit' to stop")
+    while True:
+        user = input("You: ")
+        if user.lower() == "quit":
+            break
+        detected_intents = predict_intents(user)
+        reply = get_response(detected_intents)
+        print("Bot:", reply)

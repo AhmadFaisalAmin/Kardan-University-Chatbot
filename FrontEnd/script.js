@@ -153,7 +153,7 @@ async function fetchReply(userText, typingId) {
     addMessage(data.response, "ai");
   } catch (err) {
     removeTyping(typingId);
-    addMessage("connect the python first then try", "ai");
+    addMessage("Could'nt Connect, try again later!", "ai");
     console.error("Flask error:", err);
   }
 }
