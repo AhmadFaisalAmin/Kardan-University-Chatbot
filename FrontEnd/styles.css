@@ -1075,10 +1075,10 @@ main {
   }
   .mainform {
     flex-direction: column-reverse;
+    gap: 30px;
   }
-  .helpform {
-    height: fit-content;
-    padding: 100px 50px;
+  .helppagetexts {
+    margin-top: 30px;
   }
   .helppagetexts p {
     line-height: 20px;
