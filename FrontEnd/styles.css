@@ -993,7 +993,7 @@ main {
 
   /* --- HELP PAGE --- */
   .mainform {
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 16px;
     margin-top: -10px;
     gap: 16px;
@@ -1006,6 +1006,10 @@ main {
     padding: 20px;
     border-radius: 14px;
     overflow-y: auto; /* scroll if content overflows */
+  }
+  .helppagetexts {
+    height: 400px;
+    overflow: scroll;
   }
   .helppagetexts p,
   .helppagetexts ul {
@@ -1082,7 +1086,7 @@ main {
     height: 300px;
   }
   .helppagetexts {
-    margin-top: 30px;
+    margin-top: 20px;
   }
   .helppagetexts p {
     line-height: 20px;
