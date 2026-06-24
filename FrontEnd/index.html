@@ -29,18 +29,33 @@
         </div>
       </div>
       <div class="navbtnscontainer">
-        <a href="#" style="text-decoration: none">
-          <div class="navbtns">
+        <!-- Settings Dropdown -->
+        <div class="settings-dropdown">
+          <div class="navbtns settings-btn">
             <i class="fa-solid fa-gear"></i>
             Settings
           </div>
-        </a>
-        <a href="help.html" style="text-decoration: none">
-        <a href="about.html" style="text-decoration: none">
-          <div class="navbtns">
+          <div class="dropdown-content">
+            <!-- Theme toggle -->
+            <div class="dropdown-item">
+              <span>Theme</span>
+              <label class="switch">
+                <input type="checkbox" id="themeToggle" />
+                <span class="slider round"></span>
+              </label>
+            </div>
+            <!-- Clear Chat -->
+            <div class="dropdown-item clear-chat-item">
+              <span>Clear Chat</span>
+              <button class="clear-chat-btn" onclick="clearChat()">
+                <i class="fa-solid fa-trash-can"></i> Clear
+              </button>
+            </div>
+          </div>
+        </div>
 
-        <a href="#" style="text-decoration: none">
-          <div class="navbtns helpcircle">
+        <a href="help.html" style="text-decoration: none;">
+          <div class="navbtns">
             <i class="fa-solid fa-circle-question"></i>
             Help
           </div>
@@ -79,16 +94,6 @@
             placeholder="Ask about admissions, programs, campus..."
             autocomplete="off"
           />
-          <button class="send-btn" id="sendBtn" onclick="sendMessage()" title="jd">
-            <i class="fa-solid fa-paper-plane"></i>
-          </button>
-        </div>
-
-        <div class="chat-toolbar">
-          <button class="toolbar-btn clear-btn" onclick="clearChat()">
-            <i class="fa-solid fa-trash-can"></i>
-            Clear Chat
-          </button>
 
           <div class="quick-dropdown" id="quickDropdown">
             <button class="toolbar-btn quick-btn" onclick="toggleDropdown()">
@@ -129,24 +134,21 @@
               </div>
               <div
                 class="quick-option"
-                onclick="quickSend('What is the MBA program?')"
-              >
-                <i class="fa-solid fa-briefcase"></i> MBA Program
-              </div>
-              <div
-                class="quick-option"
-                onclick="quickSend('Tell me about data science program')"
-              >
-                <i class="fa-solid fa-chart-bar"></i> Data Science
-              </div>
-              <div
-                class="quick-option"
                 onclick="quickSend('What are the campus addresses?')"
               >
                 <i class="fa-solid fa-location-dot"></i> Campus Addresses
               </div>
             </div>
           </div>
+
+          <button
+            class="send-btn"
+            id="sendBtn"
+            onclick="sendMessage()"
+            title="Send"
+          >
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
         </div>
       </div>
     </main>
