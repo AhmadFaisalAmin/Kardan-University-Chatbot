@@ -1029,21 +1029,22 @@ main {
 }
 
 /* Extra small phones (<= 480px) – further tweaks */
-@media (max-width: 480px) {
+@media (max-width: 450px) {
   .logotexts h1 {
-    font-size: 0.85rem;
+    font-size: 0.5rem;
   }
   .dotcontainer p {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
   }
   .navbtns {
-    height: 28px;
-    font-size: 0.65rem;
+    height: 20px;
+    font-size: 0.5rem;
     padding: 0 10px;
     min-width: 60px;
+    width: 80px;
   }
   .navbtns i {
-    font-size: 0.75rem;
+    font-size: 0.6rem;
   }
   .main-back {
     height: calc(100vh - 110px);
@@ -1061,9 +1062,16 @@ main {
     font-size: 0.75rem;
   }
   .quick-btn {
-    font-size: 0.65rem;
-    padding: 4px 8px;
+    font-size: 0.45rem;
+    padding: 2px 4px;
     height: 30px;
+  }
+  .qq {
+    display: none;
+  }
+  .quick-menu {
+    left: -70px;
+    scale: 0.9;
   }
 }
 
