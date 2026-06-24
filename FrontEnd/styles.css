@@ -1031,7 +1031,7 @@ main {
 /* Extra small phones (<= 480px) – further tweaks */
 @media (max-width: 450px) {
   .logotexts h1 {
-    font-size: 0.55rem;
+    font-size: 0.57rem;
   }
   .dotcontainer p {
     font-size: 0.6rem;
